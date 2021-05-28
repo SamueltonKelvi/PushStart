@@ -1,14 +1,23 @@
 import { makeStyles } from '@material-ui/core/styles';
+import Colors from '../../colors';
 
 const useStyles = makeStyles((theme) => ({
     root: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexWrap: 'wrap',
         flexGrow: 1,
+        height: '50vw'
     },
     paper: {
         padding: theme.spacing(2),
         textAlign: 'center',
-        color: theme.palette.text.secondary,
     },
+    text: {
+        fontSize: 20,
+        color: Colors.purpleOne
+    }
 }));
 
 export default useStyles;
