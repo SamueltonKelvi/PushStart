@@ -9,7 +9,7 @@ import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
-import { SnackBarCustomized, Loading } from '../../components';
+import { SnackBarCustomized, Loading, ButtonFloat } from '../../components';
 import api from '../../services';
 import { storageSetItem } from '../../helper';
 import { LoginModel } from '../../models';
@@ -114,6 +114,7 @@ export default function Login() {
                         </button>
                     }
                 </div>
+                <ButtonFloat onClick={() => history.push('feedback')}/>
             </Grid>
         </Grid>
     )
