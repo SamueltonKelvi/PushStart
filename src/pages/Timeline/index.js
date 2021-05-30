@@ -1,21 +1,13 @@
 import * as React from 'react';
 import { useHistory } from 'react-router-dom';
 import useStyles from './styles';
-import Colors from '../../colors';
 
-import PersonIcon from '@material-ui/icons/Person';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 
-import { SnackBarCustomized, Loading, ButtonFloat, ListItems } from '../../components';
+import { ButtonFloat, ListItems } from '../../components';
 import api from '../../services';
 import { storageGetItem } from '../../helper';
 
@@ -23,11 +15,7 @@ export default function Timeline() {
     const widthDimension = window.innerWidth;
     const history = useHistory();
     const classes = useStyles(widthDimension);
-    const [state, setState] = React.useState({ open: false, vertical: 'bottom', horizontal: 'center' });
     const [data, setData] = React.useState([]);
-    const [error, setError] = React.useState(false);
-    const [message, setMessage] = React.useState(null);
-    const [loading, setLoading] = React.useState(false);
 
     const handleGetData = async () => {
         try {
@@ -49,7 +37,6 @@ export default function Timeline() {
 
     return (
         <Grid container direction="row" justify="center" alignItems="flex-start" component="main" className={classes.root}>
-            {!!state.open && <SnackBarCustomized title={message} state={state} setState={setState} />}
             <CssBaseline />
             <Grid container xs={12} alignItems="center" justify="center" classname={classes.title}>
                 <Typography variant="h6" className={classes.title}>Timeline</Typography>

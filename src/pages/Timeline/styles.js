@@ -34,33 +34,7 @@ const useStyles = makeStyles((theme, props) => ({
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%'
-    },
-    avatar: {
-        display: 'flex',
-        margin: theme.spacing(1),
-        backgroundColor: Colors.white,
-        padding: 10,
-        width: 120,
-        height: 120,
-        borderRadius: 80,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    form: {
-        width: '100%',
-        marginTop: props <= 600 ? theme.spacing(5) : theme.spacing(15),
-    },
-    submit: {
-        backgroundColor: Colors.purpleOne,
-        color: Colors.white,
-        margin: theme.spacing(3, 0, 2),
-        padding: 15,
-        width: '100%',
-        border: 'none',
-        borderRadius: 4,
-        elevation: 2,
-        cursor: 'pointer'
-    },
+    }
 }));
 
 export default useStyles;
