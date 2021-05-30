@@ -4,7 +4,7 @@ function storageGetItem() {
     return localStorage.getItem(TOKEN);
 }
 function storageSetItem(data) {
-    return localStorage.getItem(TOKEN, data);
+    return localStorage.setItem(TOKEN, JSON.stringify(data));
 }
 
 export {
