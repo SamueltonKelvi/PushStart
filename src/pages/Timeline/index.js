@@ -12,9 +12,8 @@ import api from '../../services';
 import { storageGetItem } from '../../helper';
 
 export default function Timeline() {
-    const widthDimension = window.innerWidth;
     const history = useHistory();
-    const classes = useStyles(widthDimension);
+    const classes = useStyles();
     const [data, setData] = React.useState([]);
 
     const handleGetData = async () => {
@@ -33,7 +32,7 @@ export default function Timeline() {
         }
     }
 
-    React.useEffect(() => { handleGetData(); }, [!widthDimension]);
+    React.useEffect(() => { handleGetData(); }, []);
 
     return (
         <Grid container direction="row" justify="center" alignItems="flex-start" component="main" className={classes.root}>
