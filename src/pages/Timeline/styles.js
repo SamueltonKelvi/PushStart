@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme, props) => ({
         borderRadius: 0,
         textAlign: 'center',
         color: Colors.purpleOne,
+        padding: 20
     },
     listul:{
         listStyle: 'none'
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme, props) => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        width: '100%'
+        width: '100%',
     }
 }));
 
