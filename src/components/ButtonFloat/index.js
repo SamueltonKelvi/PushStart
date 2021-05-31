@@ -18,7 +18,7 @@ export default function ButtonFloat({ onClick }) {
 
     return (
         <Fab color="default" aria-label="TextsmsOutlined" onClick={onClick} className={classes.fab}>
-            <TextsmsOutlinedIcon />
+            <TextsmsOutlinedIcon style={{ color: Colors.white }}/>
         </Fab>
     )
 }
