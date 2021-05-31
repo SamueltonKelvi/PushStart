@@ -19,8 +19,9 @@ const useStyles = makeStyles((theme) => ({
         height: 400
     },
     media: {
-        height: 0,
-        paddingTop: '56.25%', // 16:9
+        width: '100%',
+        height: 100,
+        paddingBottom: '56.25%', // 16:9
     },
     expand: {
         transform: 'rotate(0deg)',
@@ -49,7 +50,7 @@ export default function ListItems({ data }) {
                 title={data.author.name}
                 subheader={dateFormat}
             />
-            <CardMedia className={classes.media} src={data.data.image} />
+            <CardMedia component="picture" className={classes.media} src={data.data.image} />
             <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p">{data.data.text}</Typography>
             </CardContent>
