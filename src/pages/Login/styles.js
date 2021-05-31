@@ -43,17 +43,7 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         marginTop: widthDimension <= 600 ? theme.spacing(5) : theme.spacing(15),
     },
-    submit: {
-        backgroundColor: Colors.purpleOne,
-        color: Colors.white,
-        margin: theme.spacing(3, 0, 2),
-        padding: 15,
-        width: '100%',
-        border: 'none',
-        borderRadius: 4,
-        elevation: 2,
-        cursor: 'pointer'
-    },
+
 }));
 
 export default useStyles;

@@ -9,7 +9,7 @@ import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
-import { SnackBarCustomized, Loading, ButtonFloat } from '../../components';
+import { SnackBarCustomized, Loading, ButtonFloat, ButtonDefault } from '../../components';
 import api from '../../services';
 import { storageSetItem } from '../../helper';
 import { LoginModel } from '../../models';
@@ -104,14 +104,7 @@ export default function Login() {
                         />
                     </form>
                     {loading ? <Loading /> :
-                        <button
-                            variant="contained"
-                            color="primary"
-                            className={classes.submit}
-                            fullWidth
-                            onClick={handleLogin}>
-                            ENTRAR
-                        </button>
+                        <ButtonDefault title="ENTRAR" onClick={handleLogin} />
                     }
                 </div>
                 <ButtonFloat onClick={() => history.push('feedback')}/>
