@@ -20,14 +20,4 @@ api.interceptors.response.use(
     },
 );
 
-api.interceptors.request.use(async (req) => {
-    const token = storageGetItem();
-
-    if (token) {
-        req.headers.Authorization = `Bearer ${token}`;
-    }
-
-    return req;
-});
-
 export default api;

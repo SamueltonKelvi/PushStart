@@ -136,7 +136,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ListItems({ data }) {
     const classes = useStyles();
-    const [votesResult, setVotesResult] = React.useState(0);
     const [favorite, setFavorite] = React.useState(false);
     const [checkButton, setCheckButton] = React.useState(false);
     const [result, setResult] = React.useState(false);
@@ -195,7 +194,13 @@ export default function ListItems({ data }) {
                     <div className={classes.vots}>{data.data.options[0].votes + data.data.options[1].votes + data.data.options[2].votes} votos | restam 5 dias</div>
                 </div>
                 :
-                <CardMedia component="picture" className={classes.media} src={data.data.image} />
+                <>
+                    {data.type === 'video' ?
+                        <CardMedia component="video" className={classes.media} src={data.data.cover} />
+                        :
+                        <CardMedia component="image" className={classes.media} src={data.data.image} width="50%" height="50%" />
+                    }
+                </>
             }
             <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p">{data.data.text}</Typography>
