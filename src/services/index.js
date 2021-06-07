@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { storageRemoveItem, storageGetItem } from '../helper';
+import { storageRemoveItem } from '../helper';
 
 const api = axios.create({
     baseURL: 'https://teste.pushstart.com.br/api',
