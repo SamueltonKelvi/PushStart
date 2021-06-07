@@ -6,8 +6,12 @@ function storageGetItem() {
 function storageSetItem(data) {
     return localStorage.setItem(TOKEN, JSON.stringify(data));
 }
+function storageRemoveItem(data) {
+    return localStorage.removeItem(TOKEN);
+}
 
 export {
     storageGetItem,
-    storageSetItem
+    storageSetItem,
+    storageRemoveItem
 }
